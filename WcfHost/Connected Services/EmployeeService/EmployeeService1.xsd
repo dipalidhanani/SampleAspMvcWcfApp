@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SampleAspMvcWcfApp.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SampleAspMvcWcfApp.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EmployeeResponce">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Flag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="JsonResult" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmployeeResponce" nillable="true" type="tns:EmployeeResponce" />
+  <xs:complexType name="AddEmployeeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Birthdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hiredate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mgrid" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Postalcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titleofcourtesy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddEmployeeRequest" nillable="true" type="tns:AddEmployeeRequest" />
+</xs:schema>

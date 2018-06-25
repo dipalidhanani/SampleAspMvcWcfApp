@@ -1,0 +1,43 @@
+﻿@model SampleAspMvcWcfApp.Models.Employee
+
+@{
+                /**/
+
+                /**/
+
+                ViewBag.Title = "Login";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-4">
+            Login
+        </div>
+        <div class="col-md-8">
+            @Html.TextBoxFor(x => x.Firstname)
+            @Html.ValidationMessageFor(a => a.Firstname, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-4">
+            PassWord
+        </div>
+        <div class="col-md-8">
+            @Html.TextBoxFor(x => x.City)
+            @Html.ValidationMessageFor(a => a.City, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <input type="submit" value="Login" />
+    </div>
+    <br />
+    <div class="row">
+        @Html.ActionLink("Sign Up", "Registration", "Home")
+    </div>
+}
+

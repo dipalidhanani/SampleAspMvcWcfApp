@@ -1,0 +1,24 @@
+﻿@model List<SampleAspMvcWcfApp.Models.Employee>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <table>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Empid
+            </td>
+            <td>
+                @item.Firstname
+            </td>
+            <td>
+                @item.Country
+            </td>
+        </tr>
+}
+
+    </table>
+</div>
